@@ -7,11 +7,11 @@ if isempty(RSSall)
     minRSS = min(min(RSSall.pattern_rssi));
 end
 
-if ang > 87 || ang < -87
-    RSS = repmat(minRSS, 1, 31);
-else
-    angidx = round(ang/3)+30;
-    RSS = RSSall.pattern_rssi(angidx, :);
-    RSS = RSS/dist^2;
-end
+% if ang > 87 || ang < -87
+%     RSS = repmat(minRSS, 1, 31);
+% else
+%     angidx = round(ang/3)+30;
+%     RSS = RSSall.pattern_rssi(angidx, :);
+%     RSS = RSS/dist^2;
+% end
 end
